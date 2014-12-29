@@ -2,7 +2,7 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
     function MainController($scope, $rootScope, $http, $state, $stateParams, $filter) { 
         
     $scope.moederbordenheadline = "Moederborden:";
-    $scope.moederborden = [
+    $rootScope.moederborden = [
       {id: "01", naam: "Gigabyte GA-01", socket: "775", type: "DDR2"},
       {id: "02", naam: "Gigabyte GA-02", socket: "1155", type: "DDR3"},
 	  {id: "03", naam: "Gigabyte GA-03", socket: "1150", type: "DDR3"},
@@ -16,7 +16,7 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
     ]
 	
 	$scope.processorenheadline = "Processoren:";
-    $scope.processoren = [
+    $rootScope.processoren = [
       {id: "01", naam: "Intel i5 2500k", socket: "1155"},
       {id: "02", naam: "Intel i7 2600k", socket: "1155"},
       {id: "03", naam: "Intel Q8400", socket: "775"},
@@ -32,7 +32,7 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
     ]
 	
 	$scope.geheugenheadline = "RAM Geheugen:";
-    $scope.geheugenkits = [
+    $rootScope.geheugenkits = [
      {id: "01", naam: "8GB G.Skill Ripjaws 1800Mhz", type: "DDR3"},
      {id: "02", naam: "4GB G.Skill Ripjaws 800Mhz", type: "DDR2"},
 	 {id: "03", naam: "8GB HyperX 1800Mhz", type: "DDR3"},
@@ -42,6 +42,21 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
 	 {id: "07", naam: "16GB Crucial 1666Mhz", type: "DDR3"},
 	 {id: "08", naam: "1GB Kingston 666Mhz", type: "DDR2"}
     ]
+
+
+            //go to matched iconbox
+    $scope.item_content = function (pc_item) {
+    	 itemSetter(pc_item);
+         $state.go('moederborden.detail/:pc_item_id', {pc_item_id: pc_item.id});
+    }
+
+        //pass the pc_item to our next view (item details) 
+        //* note *// passing an object like this should become a factory
+    itemSetter = function (pc_item) {
+            $scope.item_set = pc_item;
+    }
+
+
 
 	$scope.sidemenu = false;
 

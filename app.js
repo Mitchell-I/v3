@@ -9,10 +9,20 @@ app.config(function($stateProvider, $urlRouterProvider){
       url: '/home',
       templateUrl: "templates/content/home.html"
     })
+    .state('pc-builder', {
+      url: '/pc-builder',
+      templateUrl: "templates/content/pc-builder.html"
+  })
+
 	.state('moederborden', {
       url: '/moederborden',
       templateUrl: "templates/content/moederborden.html"
     })
+      .state('moederborden.detail/:pc_item_id', {
+          url: "/detail/:pc_item_id",
+          templateUrl: "templates/content/moederbordview.html"
+    })
+
 	.state('processoren', {
       url: '/processoren',
       templateUrl: "templates/content/processoren.html"
@@ -21,12 +31,7 @@ app.config(function($stateProvider, $urlRouterProvider){
       url: '/geheugen',
       templateUrl: "templates/content/geheugen.html"
     })
-		.state('moederborden.detail', {
-        url: "/view/:id",
-        templateUrl: 'templates/content/moederbordview.html',
-        controller: function ($stateParams) {
-            console.log($stateParams);
-	}});
+
 
 });
 
