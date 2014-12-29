@@ -1,0 +1,36 @@
+ <html>
+   <head>
+    <title>PC Builder project 5/6</title>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <link rel="stylesheet" href="scss/main.css"> 
+    <link rel="stylesheet" href="scss/bootstrap.min.css">   
+  </head>
+  
+  <body ng-app="app">
+    <div ng-controller="MainController">
+
+    <!-- this is where we will inject our header -->
+    <div ng-include="'templates/header/header.html'"></div>
+
+     <!-- this is where we will inject our content -->
+     <div ui-view autoscroll="true" class="content"></div>
+	 <div ng-include="'templates/sidemenu/sidemenu.html'"></div>
+
+     <!-- this is where we will inject our footer -->
+     <div ng-include="'templates/footer/footer.html'"></div>
+
+
+      <!-- DUMMY DATA -->
+      <!-- <script src="js/sample_data.js"></script> -->  
+
+      <script src="bower_components/angular/angular.min.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="app.js"></script>
+      <script src ="js/sample_data.js"></script>
+      <script src="js/controllers/MainController.js"></script>
+
+
+    </div>
+  </body>
+
+</html>

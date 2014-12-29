@@ -1,0 +1,38 @@
+<h3>Moederborden</h3>
+Zoeken: <input type="text" ng-model="nm.name"></input>
+<br><br>
+<input type="checkbox" ng-model="socket775" ng-true-value='775'/>Socket 775<br>
+<input type="checkbox" ng-model="socket1150" ng-true-value='1150'/>Socket 1150<br>
+<input type="checkbox" ng-model="socket1155" ng-true-value='1155'/>Socket 1155<br>
+<input type="checkbox" ng-model="socketAM3" ng-true-value='AM3'/>Socket AM3<br>
+<br><br>
+Sorteer op:<br>
+<select ng-model="orderProp">
+  <option value="id">Id</option>
+  <option value="naam">Naam</option>
+  <option value="socket">Socket</option>
+  <option value="type">Type</option>
+</select>
+<br><br>
+<table>
+    <tr>
+		<th>Id</th>
+		<th>Naam</th>
+		<th>socket</th>
+        <th>Type</th>
+		<th>Meer info</th>
+    </tr>
+	<tr ng-repeat="moederbord in moederborden | orderBy:orderProp | filter:nm.name | filter:socket775 | filter:socket1150 | filter:socket1155 | filter:socketAM3">
+        <td>{{ moederbord.id }}</td>
+		<td>{{ moederbord.naam }}</td>
+        <td>{{ moederbord.socket }}</td>
+		<td>{{ moederbord.type }}</td>
+		<td><a ui-sref="moederborden.detail" href="view/{{moederbord.id}}">Details</a></td>
+	</tr>
+</table>
+
+<br><br><br>
+<p>Array (ontwikkelomgeving):</p>
+<pre>{{ moederborden | json }}</pre>
+
+

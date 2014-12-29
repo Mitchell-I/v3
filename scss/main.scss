@@ -1,0 +1,33 @@
+@import "_reset"; 			//reset meyerstyle
+@import "_base"; 			//all our variables are in this file
+@import "_typography"; 		//all our typography
+
+
+
+/*----- This is the start for our main stylesheet -----*/
+
+/* starting of with some custom navigation styling */
+.navbar-default {
+background-color: #f8f8f8;
+border-color: #e7e7e7;
+border: 1px solid lightgrey;
+}
+
+.navbar-header {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin: 10px;
+}
+
+.container-fluid {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+/*styling for the content */
+.content {
+	padding: 30px;
+	margin: 0 auto;
+}

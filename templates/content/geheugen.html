@@ -1,0 +1,30 @@
+<h3>Geheugenkits</h3>
+Zoeken: <input type="text" ng-model="nm.name"></input>
+<br><br>
+Sorteer op:<br>
+<select ng-model="orderProp">
+  <option value="id">Id</option>
+  <option value="naam">Naam</option>
+  <option value="type">Type</option>
+</select>
+<br><br>
+<table>
+    <tr>
+		<th>Id</th>
+		<th>Naam</th>
+		<th>type</th>
+		<th>Meer info</th>
+    </tr>
+	<tr ng-repeat="geheugenkit in geheugenkits | orderBy:orderProp | filter:nm.name">
+        <td>{{ geheugenkit.id }}</td>
+		<td>{{ geheugenkit.naam }}</td>
+        <td>{{ geheugenkit.type }}</td>
+		<td><a ui-sref="processorview" href="view/{{geheugenkit.id}}">Details</a></td>
+	</tr>
+</table>
+
+<br><br><br>
+<p>Array (ontwikkelomgeving):</p>
+<pre>{{ geheugenkits | json }}</pre>
+
+
