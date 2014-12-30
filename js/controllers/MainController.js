@@ -85,3 +85,13 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
     }
 ]);
 
+app.controller("DataCtrl", function($scope, $http) {
+  $http.get('data/cases_items.json').
+    success(function(data, status, headers, config) {
+      $scope.cases = data;
+    }).
+    error(function(data, status, headers, config) {
+      // log error
+    });
+});
+

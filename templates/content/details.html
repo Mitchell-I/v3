@@ -1,0 +1,16 @@
+<div class="imagedetail">
+	<img src="{{ item_set.image }}">
+</div>
+
+<div class="infodetail">
+<h4>Productinformatie:</h4>
+	<div>Naam: {{ item_set.title }}</div>
+	<div ng-show="item_set.price">Goedkoopste prijs: {{ item_set.price}}</div>
+	<div ng-show="item_set.stock">Voorraad: {{ item_set.stock }}</div>
+	<div ng-show="item_set.socket">Socket: {{ item_set.socket }}</div>
+	<div ng-show="item_set.type">Type DDR: {{ item_set.type }}</div>
+<a href="{{ item_set.link }}" target="_blank"><button>Bekijk product</button></a><br/><br/>
+</div>
+
+
+<pre>{{ item_set | json }}</pre>
