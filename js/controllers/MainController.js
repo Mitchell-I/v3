@@ -43,6 +43,7 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
 	 {id: "08", naam: "1GB Kingston 666Mhz", type: "DDR2"}
     ]
 
+<<<<<<< HEAD
 	$scope.behuizingenheadline = "Behuizingen:";
     $rootScope.behuizingen = [{"image": "http://img.informatique.nl/110/535011.jpg", "stock": "Product is op voorraad", "link": "http://www.informatique.nl/535011/coolermaster-nse-300-kkn1.html", "price": "\u20ac 39,00", "title": "CoolerMaster NSE-300-KKN1"},
 {"image": "http://img.informatique.nl/110/545977.jpg", "stock": "Product is op voorraad", "link": "http://www.informatique.nl/545977/fractal-design-define-r5-black.html", "price": "\u20ac 109,00", "title": "Fractal Design Define R5 Black"},
@@ -507,16 +508,22 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
 {"image": "http://img.informatique.nl/110/920079.jpg", "stock": "Product wordt geleverd op bestelling.", "link": "http://www.informatique.nl/920079/x2-6018.html", "price": "\u20ac 51,00", "title": "X2.6018"},
 {"image": "http://img.informatique.nl/110/999793.jpg", "stock": "Product wordt geleverd op bestelling.", "link": "http://www.informatique.nl/999793/fractal-design-arc-mini-r2-window.html", "price": "\u20ac 93,00", "title": "Fractal Design Arc Mini R2 Window"}]
 		
+=======
+
+>>>>>>> origin/master
             //go to matched iconbox
     $scope.item_content = function (pc_item) {
     	 itemSetter(pc_item);
          $state.go('moederborden.detail/:pc_item_id', {pc_item_id: pc_item.id});
     }
+<<<<<<< HEAD
 	
 	    $scope.item_content = function (pc_item) {
     	 itemSetter(pc_item);
          $state.go('behuizingen.detail/:pc_item_id', {pc_item_id: pc_item.id});
     }
+=======
+>>>>>>> origin/master
 
         //pass the pc_item to our next view (item details) 
         //* note *// passing an object like this should become a factory
