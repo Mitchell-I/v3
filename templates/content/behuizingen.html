@@ -13,7 +13,7 @@ Sorteer op:<br>
 		<th>Naam</th>
 		<th>Meer info</th>
     </tr>
-	<tr ng-repeat="pc_item in cases | orderBy:orderProp | filter:nm.name">
+	<tr ng-repeat="pc_item in cases | orderBy:orderProp | filter:nm.name | limitTo: 25">
 		<td><img src="{{ pc_item.image }}"></td>
 		<td>{{ pc_item.title }}</td>
 		<td><a ng-click="item_content(pc_item); itemSetter(pc_item)">Details</a></td>
@@ -22,6 +22,5 @@ Sorteer op:<br>
 
 </div>
 <p>Array (ontwikkelomgeving):</p>
-<pre>{{ behuizingen | json }}</pre>
 
 
