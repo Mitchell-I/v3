@@ -3,44 +3,44 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
         
     $scope.moederbordenheadline = "Moederborden:";
     $scope.moederborden = [
-      {id: "01", name: "Gigabyte GA-01", socket: "775", type: "DDR2"},
-      {id: "02", name: "Gigabyte GA-02", socket: "1155", type: "DDR3"},
-	  {id: "03", name: "Gigabyte GA-03", socket: "1150", type: "DDR3"},
-	  {id: "04", name: "Gigabyte Sniper G1", socket: "1150", type: "DDR3"},
-	  {id: "05", name: "Asus Gaming", socket: "1155", type: "DDR3"},
-      {id: "06", name: "Asus BA-01", socket: "1150", type: "DDR3"},
-      {id: "07", name: "AsRock extreme 3", socket: "1150", type: "DDR3"},
-	  {id: "08", name: "AsRock extreme 2", socket: "775", type: "DDR2"},
-	  {id: "09", name: "MSI Gaming", socket: "AM3", type: "DDR3"},
-	  {id: "10", name: "Gigabyte CA-01", socket: "AM3", type: "DDR3"}
+      {id: "01", title: "Gigabyte GA-01", socket: "775", type: "DDR2"},
+      {id: "02", title: "Gigabyte GA-02", socket: "1155", type: "DDR3"},
+	  {id: "03", title: "Gigabyte GA-03", socket: "1150", type: "DDR3"},
+	  {id: "04", title: "Gigabyte Sniper G1", socket: "1150", type: "DDR3"},
+	  {id: "05", title: "Asus Gaming", socket: "1155", type: "DDR3"},
+      {id: "06", title: "Asus BA-01", socket: "1150", type: "DDR3"},
+      {id: "07", title: "AsRock extreme 3", socket: "1150", type: "DDR3"},
+	  {id: "08", title: "AsRock extreme 2", socket: "775", type: "DDR2"},
+	  {id: "09", title: "MSI Gaming", socket: "AM3", type: "DDR3"},
+	  {id: "10", title: "Gigabyte CA-01", socket: "AM3", type: "DDR3"}
     ]
 	
 	$scope.processorenheadline = "Processoren:";
     $scope.processoren = [
-      {id: "01", name: "Intel i5 2500k", socket: "1155"},
-      {id: "02", name: "Intel i7 2600k", socket: "1155"},
-      {id: "03", name: "Intel Q8400", socket: "775"},
-	  {id: "04", name: "Intel Q6600", socket: "775"},
-	  {id: "05", name: "Intel E8400", socket: "775"},
-	  {id: "06", name: "Intel E6200", socket: "775"},
-      {id: "07", name: "Intel i5 4460", socket: "1150"},
-	  {id: "08", name: "Intel i7 4790", socket: "1150"},
-	  {id: "09", name: "Intel i7 4790k", socket: "1150"},
-	  {id: "10", name: "AMD FX 6300", socket: "AM3"},
-	  {id: "11", name: "AMD FX 9590", socket: "AM3"},
-	  {id: "12", name: "AMD FX 8530", socket: "AM3"}
+      {id: "01", title: "Intel i5 2500k", socket: "1155" },
+      {id: "02", title: "Intel i7 2600k", socket: "1155"},
+      {id: "03", title: "Intel Q8400", socket: "775"},
+	  {id: "04", title: "Intel Q6600", socket: "775"},
+	  {id: "05", title: "Intel E8400", socket: "775"},
+	  {id: "06", title: "Intel E6200", socket: "775"},
+      {id: "07", title: "Intel i5 4460", socket: "1150"},
+	  {id: "08", title: "Intel i7 4790", socket: "1150"},
+	  {id: "09", title: "Intel i7 4790k", socket: "1150"},
+	  {id: "10", title: "AMD FX 6300", socket: "AM3"},
+	  {id: "11", title: "AMD FX 9590", socket: "AM3"},
+	  {id: "12", title: "AMD FX 8530", socket: "AM3"}
     ]
 	
 	$scope.geheugenheadline = "RAM Geheugen:";
     $scope.geheugenkits = [
-     {id: "01", naam: "8GB G.Skill Ripjaws 1800Mhz", type: "DDR3"},
-     {id: "02", naam: "4GB G.Skill Ripjaws 800Mhz", type: "DDR2"},
-	 {id: "03", naam: "8GB HyperX 1800Mhz", type: "DDR3"},
-	 {id: "04", naam: "4GB HyperX 800Mhz", type: "DDR2"},
-	 {id: "05", naam: "2GB HyperX 666Mhz", type: "DDR2"},
-	 {id: "06", naam: "8GB Crucial 1666Mhz", type: "DDR3"},
-	 {id: "07", naam: "16GB Crucial 1666Mhz", type: "DDR3"},
-	 {id: "08", naam: "1GB Kingston 666Mhz", type: "DDR2"}
+     {id: "01", title: "8GB G.Skill Ripjaws 1800Mhz", type: "DDR3"},
+     {id: "02", title: "4GB G.Skill Ripjaws 800Mhz", type: "DDR2"},
+	 {id: "03", title: "8GB HyperX 1800Mhz", type: "DDR3"},
+	 {id: "04", title: "4GB HyperX 800Mhz", type: "DDR2"},
+	 {id: "05", title: "2GB HyperX 666Mhz", type: "DDR2"},
+	 {id: "06", title: "8GB Crucial 1666Mhz", type: "DDR3"},
+	 {id: "07", title: "16GB Crucial 1666Mhz", type: "DDR3"},
+	 {id: "08", title: "1GB Kingston 666Mhz", type: "DDR2"}
     ]
 
     $scope.behuizingen = [{"image": "http://img.informatique.nl/110/535011.jpg", "stock": "Product is op voorraad", "link": "http://www.informatique.nl/535011/coolermaster-nse-300-kkn1.html", "price": "\u20ac 39,00", "title": "CoolerMaster NSE-300-KKN1"},

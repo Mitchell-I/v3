@@ -25,7 +25,7 @@ Sorteer op:<br>
     </tr>
 	<tr ng-repeat="pc_item in moederborden | orderBy:orderProp | filter:nm.name | filter:socket775 | filter:socket1150 | filter:socket1155 | filter:socketAM3">
         <td>{{ pc_item.id }}</td>
-		<td>{{ pc_item.naam }}</td>
+		<td>{{ pc_item.title }}</td>
         <td>{{ pc_item.socket }}</td>
 		<td>{{ pc_item.type }}</td>
 		<td><a ng-click="item_content(pc_item); itemSetter(pc_item)">Details</a></td>

@@ -57,23 +57,5 @@ table {
   padding: 30px;
   margin: 0 auto; }
 
-table { 
-	width: 100%;
-}
-
-td {
-	padding: 10px;
-	text-align: center;
-}
-
-th {
-	font-weight: bold;
-}
-
-tr {
-	border: 1px solid;
-}
-
-#sidemenu { background: #fff; height: 300px; position: fixed; border: 1px solid; width: 70%; bottom: 0px; }
-
-.navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container  { width: 70% !important; height: 20px; padding: 10px;}
+.infodetail div {
+  height: 30px; }

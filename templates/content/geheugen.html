@@ -15,11 +15,11 @@ Sorteer op:<br>
 		<th>type</th>
 		<th>Meer info</th>
     </tr>
-	<tr ng-repeat="geheugenkit in geheugenkits | orderBy:orderProp | filter:nm.name">
-        <td>{{ geheugenkit.id }}</td>
-		<td>{{ geheugenkit.naam }}</td>
-        <td>{{ geheugenkit.type }}</td>
-		<td><a ui-sref="processorview" href="view/{{geheugenkit.id}}">Details</a></td>
+	<tr ng-repeat="pc_item in geheugenkits | orderBy:orderProp | filter:nm.name">
+        <td>{{ pc_item.id }}</td>
+		<td>{{ pc_item.title }}</td>
+        <td>{{ pc_item.type }}</td>
+		<td><a ng-click="item_content(pc_item); itemSetter(pc_item)">Details</a></td>
 	</tr>
 </table>
 

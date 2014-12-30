@@ -20,11 +20,11 @@ Sorteer op:<br>
 		<th>socket</th>
 		<th>Meer info</th>
     </tr>
-	<tr ng-repeat="processor in processoren | orderBy:orderProp | filter:nm.name | filter:socket775 | filter:socket1150 | filter:socket1155 | filter:socketAM3">
-        <td>{{ processor.id }}</td>
-		<td>{{ processor.naam }}</td>
-        <td>{{ processor.socket }}</td>
-		<td><a ui-sref="processorview" href="view/{{processor.id}}">Details</a></td>
+	<tr ng-repeat="pc_item in processoren | orderBy:orderProp | filter:nm.name | filter:socket775 | filter:socket1150 | filter:socket1155 | filter:socketAM3">
+        <td>{{ pc_item.id }}</td>
+		<td>{{ pc_item.title }}</td>
+        <td>{{ pc_item.socket }}</td>
+		<td><a ng-click="item_content(pc_item); itemSetter(pc_item)">Details</a></td>
 	</tr>
 </table>
 
