@@ -2,7 +2,7 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
     function MainController($scope, $rootScope, $http, $state, $stateParams, $filter) { 
         
     $scope.moederbordenheadline = "Moederborden:";
-    $rootScope.moederborden = [
+    $scope.moederborden = [
       {id: "01", naam: "Gigabyte GA-01", socket: "775", type: "DDR2"},
       {id: "02", naam: "Gigabyte GA-02", socket: "1155", type: "DDR3"},
 	  {id: "03", naam: "Gigabyte GA-03", socket: "1150", type: "DDR3"},
@@ -16,7 +16,7 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
     ]
 	
 	$scope.processorenheadline = "Processoren:";
-    $rootScope.processoren = [
+    $scope.processoren = [
       {id: "01", naam: "Intel i5 2500k", socket: "1155"},
       {id: "02", naam: "Intel i7 2600k", socket: "1155"},
       {id: "03", naam: "Intel Q8400", socket: "775"},
@@ -32,7 +32,7 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
     ]
 	
 	$scope.geheugenheadline = "RAM Geheugen:";
-    $rootScope.geheugenkits = [
+    $scope.geheugenkits = [
      {id: "01", naam: "8GB G.Skill Ripjaws 1800Mhz", type: "DDR3"},
      {id: "02", naam: "4GB G.Skill Ripjaws 800Mhz", type: "DDR2"},
 	 {id: "03", naam: "8GB HyperX 1800Mhz", type: "DDR3"},
