@@ -1,0 +1,27 @@
+<div ui-view>
+<h3>behuizingen</h3>
+Zoeken: <input type="text" ng-model="nm.name"></input>
+<br><br>
+Sorteer op:<br>
+<select ng-model="orderProp">
+  <option value="title">Naam</option>
+</select>
+<br><br>
+<table>
+    <tr>
+		<th></th>
+		<th>Naam</th>
+		<th>Meer info</th>
+    </tr>
+	<tr ng-repeat="pc_item in behuizingen | orderBy:orderProp | filter:nm.name">
+		<td><img src="{{ pc_item.image }}"></td>
+		<td>{{ pc_item.title }}</td>
+		<td><a ng-click="item_content(pc_item); itemSetter(pc_item)">Details</a></td>
+	</tr>
+</table>
+
+</div>
+<p>Array (ontwikkelomgeving):</p>
+<pre>{{ behuizingen | json }}</pre>
+
+
