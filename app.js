@@ -18,9 +18,9 @@ app.config(function($stateProvider, $urlRouterProvider){
       url: '/moederborden',
       templateUrl: "templates/content/moederborden.html"
     })
-      .state('moederborden.detail/:pc_item_id', {
-          url: "/detail/:pc_item_id",
-          templateUrl: "templates/content/moederbordview.html"
+      .state('details/:pc_item_id', {
+          url: "details/:pc_item_id",
+          templateUrl: "templates/content/details.html"
     })
 
 	.state('processoren', {
@@ -31,19 +31,12 @@ app.config(function($stateProvider, $urlRouterProvider){
       url: '/geheugen',
       templateUrl: "templates/content/geheugen.html"
     })
-<<<<<<< HEAD
 	.state('behuizingen', {
       url: '/behuizingen',
       templateUrl: "templates/content/behuizingen.html"
     })
-	 .state('behuizingen.detail/:pc_item_id', {
-          url: "/detail/:pc_item_id",
-          templateUrl: "templates/content/behuizingview.html"
-    })
-=======
 
 
->>>>>>> origin/master
 });
 
 
