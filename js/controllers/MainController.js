@@ -43,15 +43,6 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
 	 {id: "08", title: "1GB Kingston 666Mhz", type: "DDR2"}
     ]
 
-    $scope.behuizingen = [{"image": "http://img.informatique.nl/110/535011.jpg", "stock": "Product is op voorraad", "link": "http://www.informatique.nl/535011/coolermaster-nse-300-kkn1.html", "price": "\u20ac 39,00", "title": "CoolerMaster NSE-300-KKN1"},
-{"image": "http://img.informatique.nl/110/545977.jpg", "stock": "Product is op voorraad", "link": "http://www.informatique.nl/545977/fractal-design-define-r5-black.html", "price": "\u20ac 109,00", "title": "Fractal Design Define R5 Black"},
-{"image": "http://img.informatique.nl/110/559869.jpg", "stock": "Product is op voorraad", "link": "http://www.informatique.nl/559869/fractal-design-r4-black-pearl.html", "price": "\u20ac 109,00", "title": "Fractal Design R4 Black Pearl"},
-{"image": "http://img.informatique.nl/110/538286.jpg", "stock": "Product is op voorraad", "link": "http://www.informatique.nl/538286/nzxt-h440.html", "price": "\u20ac 118,00", "title": "NZXT H440"},
-{"image": "http://img.informatique.nl/110/539497.jpg", "stock": "Product is op voorraad", "link": "http://www.informatique.nl/539497/corsair-carbide-spec-03-red-led.html", "price": "\u20ac 59,00", "title": "Corsair Carbide SPEC-03 Red LED"},
-{"image": "http://img.informatique.nl/110/539495.jpg", "stock": "Product is op voorraad", "link": "http://www.informatique.nl/539495/corsair-carbide-spec-01-red-led.html", "price": "\u20ac 50,00", "title": "Corsair Carbide SPEC-01 Red LED"},
-{"image": "http://img.informatique.nl/110/535615.jpg", "stock": "Product is op voorraad", "link": "http://www.informatique.nl/535615/coolermaster-cm-690-iii-atx-zwart.html", "price": "\u20ac 91,00", "title": "CoolerMaster CM 690 III, ATX, Zwart"},
-]
-
 	$scope.behuizingenheadline = "Behuizingen:";
 
             //go to matched page
@@ -86,7 +77,7 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', '$state', '$s
 ]);
 
 app.controller("DataCtrl", function($scope, $http) {
-  $http.get('data/cases_items.json').
+  $http.get('http://luuk-schoenmakers.nl:5000/Informatique/cases_items.json').
     success(function(data, status, headers, config) {
       $scope.cases = data;
     }).
